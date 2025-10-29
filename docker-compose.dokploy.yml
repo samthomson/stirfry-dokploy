@@ -1,4 +1,3 @@
-version: "3.8"
 services:
   strfry:
     image: ghcr.io/hoytech/strfry:latest
