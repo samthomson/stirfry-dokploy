@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  strfry:
+    image: ghcr.io/hoytech/strfry:latest
+    restart: unless-stopped
+    volumes:
+      - strfry_data:/app/strfry-db
+    ports:
+      - "7777:7777"
+volumes:
+  strfry_data:
