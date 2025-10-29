@@ -6,7 +6,7 @@ services:
       - strfry_data:/app/strfry-db
       - ./strfry:/config:ro # mount entire config directory
     entrypoint: ["/bin/sh", "-c"]
-    command: ["cp /config/strfry.conf /app/strfry.conf && cat /app/strfry.conf && /app/strfry relay"]
+    command: ["cp /config/strfry.conf /app/strfry.conf && /app/strfry relay"]
     expose:
       - "7777"
     networks: [dokploy-network]
