@@ -6,7 +6,8 @@ services:
     volumes:
       - strfry_data:/app/strfry-db
       - ./strfry/strfry.conf:/tmp/strfry.conf:ro # bind config to temp location
-    command: sh -c "cp /tmp/strfry.conf /app/strfry.conf && /app/strfry relay"
+    entrypoint: ["/bin/sh", "-c"]
+    command: ["cp /tmp/strfry.conf /app/strfry.conf && /app/strfry relay"]
     expose:
       - "7777"
     networks: [dokploy-network]
