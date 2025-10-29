@@ -5,6 +5,7 @@ services:
     restart: unless-stopped
     volumes:
       - strfry_data:/app/strfry-db
+      - ./strfry/strfry.conf:/app/strfry.conf:ro # bind the config
     expose:
       - "7777"
     networks: [dokploy-network]
